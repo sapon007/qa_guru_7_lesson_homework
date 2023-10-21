@@ -1,17 +1,21 @@
-public class Cars {
+public abstract class Cars {
+    private String brand;
     private String model;
     private int yearOfManufacture;
     private String color;
-    private int price;
 
-    public Cars(String model, int yearOfManufacture, String color, int price) {
+    public Cars(String brand, String model, int yearOfManufacture, String color) {
+        this.brand = brand;
         this.model = model;
         this.yearOfManufacture = yearOfManufacture;
         this.color = color;
-        this.price = price;
     }
 
-    public void buyCar(String brand) {
-        System.out.println("Поздравляем! Вы купили " + brand + " " + model + " за " + price);
-    }
+    public abstract void addEngines(String engine);
+
+    public abstract void deleteEngines(int index);
+
+    public abstract void findEngines(String engine);
+
+    public abstract void printEngines(String model);
 }
