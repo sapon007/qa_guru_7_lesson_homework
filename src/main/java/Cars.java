@@ -11,11 +11,4 @@ public abstract class Cars {
         this.color = color;
     }
 
-    public abstract void addEngines(String engine);
-
-    public abstract void deleteEngines(int index);
-
-    public abstract void findEngines(String engine);
-
-    public abstract void printEngines(String model);
 }

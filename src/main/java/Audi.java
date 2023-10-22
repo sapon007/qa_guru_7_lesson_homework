@@ -8,22 +8,22 @@ public class Audi extends Cars {
 
     private ArrayList<String> engines = new ArrayList<>();
 
-    @Override
     public void addEngines(String engine) {
         engines.add(engine);
     }
 
-    @Override
     public void deleteEngines(int index) {
         engines.remove(index);
     }
 
-    @Override
     public void findEngines(String engine) {
-
+        if(engines.contains(engine)) {
+            System.out.println("Есть");
+        } else {
+            System.out.println("Нет");
+        }
     }
 
-    @Override
     public void printEngines(String model) {
         System.out.println("Список доступных двигателей для Audi " + model + ":");
         for(String engine: engines) {
