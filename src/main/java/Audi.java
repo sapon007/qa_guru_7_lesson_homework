@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Audi extends Cars {
 
@@ -25,9 +26,10 @@ public class Audi extends Cars {
     }
 
     public void printEngines(String model) {
+        Iterator iterator = engines.iterator();
         System.out.println("Список доступных двигателей для Audi " + model + ":");
-        for(String engine: engines) {
-            System.out.println(engine);
-        }
+        do {
+            System.out.println(iterator.next());
+        } while (iterator.hasNext());
     }
 }

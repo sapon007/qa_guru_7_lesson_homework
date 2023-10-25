@@ -25,8 +25,10 @@ public class Skoda extends Cars{
 
     public void printEngines(String model) {
         System.out.println("Список доступных двигателей для Skoda " + model + ":");
-        for(String engine: engines) {
-            System.out.println(engine);
+        int size = engines.size();
+        for(int i = 0; i < size; i++) {
+            System.out.println(engines.pop());
         }
+
     }
 }
